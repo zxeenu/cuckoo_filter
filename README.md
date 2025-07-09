@@ -14,7 +14,7 @@ A Cuckoo Filter is a probabilistic data structure that efficiently tests whether
 - **False negatives**: Never
 - **Deletions**: Supported (unlike Bloom filters)
 - **Space efficient**: Uses fingerprints instead of storing full items
-- **Constant lookup time**: O(1) with at most 2 hash table lookups
+- **Constant lookup time**: checks up to 2 buckets of fixed size each. Often the item is found in the first bucket, so the second bucket lookup may be redundant.
 
 ## How It Works
 
